@@ -1,0 +1,73 @@
+
+<script>
+	function check(){
+			var number = document.getElementById("number");
+			if(number.value.length==0){
+				alert("购买股票数量不能为0");
+				number.focus();
+				return false;
+			}
+	}
+</script>
+<form method="POST" action="plugin.php?id=wirror_stock&ac=sellstock&op=submitsellstock">
+<div class='paytypediv' id='maindiv'  style="width:380px;">
+	<div style="float: right;margin-top: -10px;" id='maindiv1'>
+		<a title="close" onclick="hideWindow('wirror_stock')" class="flbc"
+			href="javascript:;">关闭</a>
+	</div>
+	<table style='margin:10px;' cellspacing="0" cellpadding="0" class="dt">
+	<tr>
+	<td colspan=2>
+		<h3 style="color:#369;font-size: 14px;font-weight: 700;"id="fctrl_buyer" style="cursor: move;">
+		<em>卖出股票</em>
+		</h3>
+	</td>
+	</tr>
+<tr>
+<td width="60" class="xw1">股票名称</td>
+<td width="300">
+<em class="xi2">$cur_stock[0]
+</em>
+</td>
+</tr><tr>
+</tr>
+<tr>
+<td class="xw1">可卖数量</td>
+<td>
+$userstock['stockcount']
+</td>
+</tr>
+
+<tr>
+<td width="60" class="xw1">当前价格</td>
+<td width="300">
+<em class="xi2">$cur_stock[3]
+</em>
+</td>
+</tr><tr>
+</tr>
+
+<tr>
+</tr><tr>
+<td class="xw1">卖出数量</td>
+<td>
+<input type='hidden' name='code' value='{$stockcode}'>
+<input type="text" class="px z" size="15" value="" id="number" name="sellnumber" fwin="buyer">&nbsp;
+<a href="javascript:;" class="dpbtn" onclick="showselect(this, 'number', 'numberselect')">^</a>
+<ul style="display: none" id="numberselect" fwin="buyer">
+<li>100</li>
+<li>500</li>
+<li>1000</li>
+<li>2000</li>
+<li>3000</li>
+<li>5000</li>
+</ul>
+</td>
+</tr><tr>
+</tr></table>
+<div class="o pns">
+<button onclick="return check()" class="pn pnc xs2" type="submit"><strong>确认</strong></button>
+</div>
+</div>
+
+</form>

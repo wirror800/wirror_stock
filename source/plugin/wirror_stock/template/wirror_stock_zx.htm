@@ -1,0 +1,156 @@
+{template common/header}
+
+<link rel="stylesheet" href="source/plugin/wirror_stock/imgs/cjxixistock.css" />
+
+<div id="ct" class="ct2_a wp mbm cl">
+<div class="mn">
+
+<div class="bm" style="border-top:2px #EB4735 solid;">  
+<div class="bm_c">
+<p class="mbn">$curtime $_G['username']，您的股票帐号可用资金：<em class="xi1">{$zjdata['stockzj']}</em> 元。<a href="javascript:;"  onclick="showWindow('wirror_stock', 'plugin.php?id=wirror_stock&ac=zjchange')" class="xi2">转帐</a></p><p>
+<strong>$sh[0]</strong>：&nbsp;
+
+<!--{if $sh[3] > 0}-->
+<font color="red">
+<!--{else}-->
+<font color="green">
+<!--{/if}-->
+
+
+$sh[1]&nbsp;&nbsp;
+
+
+<!--{if $sh[3] > 0}-->
+<img src="source/plugin/wirror_stock/imgs/top.gif" class="vm">
+<!--{else}-->
+<img src="source/plugin/wirror_stock/imgs/pot.gif" class="vm">
+<!--{/if}-->
+&nbsp;$sh[2]&nbsp;&nbsp;$sh[3]&nbsp;&nbsp;$sh[4]&nbsp;&nbsp;$sh[5]</font>&nbsp;<span class="pipe">|</span>&nbsp;
+<strong>
+$sz[0]</strong>：&nbsp;
+
+<!--{if $sz[3] > 0}-->
+<font color="red">
+<!--{else}-->
+<font color="green">
+<!--{/if}-->
+
+$sz[1]&nbsp;&nbsp;
+
+
+<!--{if $sz[3] > 0}-->
+<img src="source/plugin/wirror_stock/imgs/top.gif" class="vm">
+<!--{else}-->
+<img src="source/plugin/wirror_stock/imgs/pot.gif" class="vm">
+<!--{/if}-->
+
+
+
+&nbsp;$sz[2]&nbsp;&nbsp;$sz[3]&nbsp;&nbsp;$sz[4]&nbsp;&nbsp;$sz[5]</font>
+</p></div>
+</div>
+
+<div style="border-top:2px #EB4735 solid;">      
+<div class="bm_a">
+<h2>
+<strong class="xs2">
+<a href="plugin.php?id=wirror_stock&ac=market">全部股票</a>&nbsp;&nbsp;
+<a href="plugin.php?id=wirror_stock&ac=market&op=serachsz&type=hz">上证股票</a>&nbsp;&nbsp;
+<a href="plugin.php?id=wirror_stock&ac=market&op=serachsz&type=sz">深证股票</a>
+</strong>
+<span>
+<form method="post" action="plugin.php?id=wirror_stock&ac=market&op=search">
+<input type="text" onblur="if (value=='') {value='请输入股票代码...';this.style.color='#999';}" onfocus="if(value=='请输入股票代码...') {value='';}this.style.color='#000';" value="请输入股票代码..." name="code">
+<button tabindex="1" name="submit" id="submit" value="true" type="submit">搜索股票</button>
+</form>
+<script type="text/javascript"> 
+function searchcheck(theform) {
+if(($('submit').code != 'submit' && theform.code.value == "请输入股票代码或股票名称...")) {
+showError('请输入股票代码或股票名称...');
+return false;
+}
+}
+</script>
+</span>
+</h2>
+</div>
+<table cellspacing="0" cellpadding="0" class="dt">
+<tbody><tr class="xw1">
+<td width="40">代码</td>
+<td width="60">名称</td>
+<td width="60">最新价</td>
+<td width="60">今开</td>
+<td width="60">昨收</td>
+<td width="60">最高</td>
+<td width="60">最低</td>
+<td width="60">成交量</td>
+<td width="60">成交额</td>
+<td width="60">操作</td>
+<td width="25" align="right">关注</td>
+</tr>
+
+<!--{loop $stockszxdata $stock}-->
+<tr class="xi5">
+	<td><a href="plugin.php?id=wirror_stock&ac=detail&code={$stock['stockcode']}" target="_blank" class="xi2">{$stock['stockcode']}</a></td>
+	<td><a href="plugin.php?id=wirror_stock&ac=detail&code={$stock['stockcode']}" target="_blank" class="xi2">{$stock['stockname']}</a></td>
+	<td>{$stock['zxj']}</td>
+	<td>{$stock['jk']}</td>
+	<td>{$stock['zs']}</td>
+	<td>{$stock['zg']}</td>
+	<td>{$stock['zd']}</td>
+	<td>{$stock['chl']}</td>
+	<td>{$stock['che']}</td>
+	<td><a href="javascript:;" onclick="showWindow('wirror_stock', 'plugin.php?id=wirror_stock&ac=buystock&code={$stock[stockcode]}', 'get', 0)" class="xi2">买入</a></td>
+	<td align="right">
+	<a class="xg1" title="删除自选股"  href="plugin.php?id=wirror_stock&ac=zxstocks&op=deletezx&zxid={$stock['id']}">x</a>
+	
+	</td>
+</tr>
+<!--{/loop}-->
+
+<tr>
+<td colspan=13>{$pagenav}</td>
+</tr>
+
+
+</tbody></table>
+
+
+</div>
+<!-- 
+<div class="bm bm_c">
+
+<div class="cl" id="list_ajax">
+
+
+<table cellspacing="0" cellpadding="0" class="dt" style="min-width:550px;">
+<tbody><tr>
+<th>股票代码</th>
+<th>股票名称</th>
+<th>可卖数量</th>
+<th>成本价</th>
+<th>当前价</th>
+<th>最新市值</th>
+<th>浮动盈亏</th>
+<th>盈亏比例(%)</th>
+<th>操作管理</th>
+</tr></tbody></table>
+
+</div>
+<script type="text/javascript">
+/* function resultlist(){
+ajaxget('plugin.php?id=wirror_stock&ac=mystocks', 'list_ajax');
+$('list_ajax').style.display = 'block';
+}
+if($('list_ajax')){setTimeout('resultlist()', 1000);} */
+</script>
+</div>
+ -->
+</div>
+
+{template wirror_stock:wirror_stock_left}
+
+</div>
+
+
+{template common/footer}

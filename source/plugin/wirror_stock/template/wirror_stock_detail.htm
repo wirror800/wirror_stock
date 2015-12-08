@@ -1,0 +1,121 @@
+{template common/header}
+
+<link rel="stylesheet" href="source/plugin/wirror_stock/imgs/cjxixistock.css" />
+<div id="ct" class="ct2_a wp mbm cl">
+<div class="mn">
+<div class="cl">
+<div class="bm_h"><em class="y xg1">
+更新时间：{$cur_stock[30]} {$cur_stock[31]}</em>
+<strong class="xs2">{$cur_stock[0]}</strong>
+ ({$stockcode})&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="javascript:;" onclick="showWindow('wirror_stock', 'plugin.php?id=wirror_stock&ac=buystock&code={$stockcode}', 'get', 0)"  class="xi1">买入</a>&nbsp;&nbsp;<a  href="plugin.php?id=wirror_stock&ac=stockgz&code={$stockcode}" title="加入自选股">+</a></div>
+</div>
+<div class="cl">
+<div class="z" style="width:545px;">
+<div class="mtn bbdo pbn mbm cl">
+<table>
+<tbody><tr>
+<td width="150">
+<strong class="xs6">{$cur_stock[3]}  元</strong>
+</td>
+<td width="390">
+<ul class="xl2">
+<li>今日最高价：{$cur_stock[4]} </li>
+<li>昨日收盘价：{$cur_stock[2]}</li>
+<li>今日最低价：{$cur_stock[5]}</li>
+<li>今日最低价：{$cur_stock[5]}</li>
+<li>成交量：{$cur_stock[8]} 手</li>
+<li>成交额：{$cur_stock[9]}  万元</li>
+</ul>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<img src="http://image.sinajs.cn/newchart/daily/n/{$stockcode}.gif" id="stockimage" class="ac1">
+<img src="http://image.sinajs.cn/newchart/min/n/{$stockcode}.gif" id="stockimage" class="ac1">
+
+
+
+
+<p>
+</p></div>
+<div class="y mtm" style="border-top:2px #EB4735 solid;width:240px;">
+<div class="bm_h">五档盘口</div>
+<table class="mtn dt">
+<tbody><tr><td width="80">&nbsp;买⑤ </td><td width="80">{$cur_stock[19]} </td><td width="80">{$cur_stock[18]} </td></tr>
+<tr><td>&nbsp;买④ </td><td>{$cur_stock[17]} </td><td>{$cur_stock[16]} </td></tr>
+<tr><td>&nbsp;买③ </td><td>{$cur_stock[15]}</td><td>{$cur_stock[14]} </td></tr>
+<tr><td>&nbsp;买② </td><td>{$cur_stock[13]}</td><td>{$cur_stock[12]} </td></tr>
+<tr><td>&nbsp;买① </td><td>{$cur_stock[11]}</td><td>{$cur_stock[10]} </td></tr>
+
+<!-- 
+<tr><th>&nbsp;成交&nbsp;</th><th>12.43</th><th>&nbsp;</th></tr>
+<tr><td>&nbsp;卖⑤ </td><td>12.47</td><td>36500</td></tr>
+<tr><td>&nbsp;卖④ </td><td>12.46</td><td>5600</td></tr>
+<tr><td>&nbsp;卖③ </td><td>12.45</td><td>39658</td></tr>
+<tr><td>&nbsp;卖② </td><td>12.44</td><td>103400</td></tr>
+<tr><td>&nbsp;卖① </td><td>12.43</td><td>25248</td></tr> -->
+</tbody></table>
+</div>
+</div>
+<!-- <br>
+<ul>
+<li>股票名称：平安银行</li>
+<li>今日开盘价：12.46</li>
+<li>昨日收盘价：12.50</li>
+<li>当前价格：12.43</li>
+<li>今日最高价：12.70</li>
+<li>今日最低价：12.31</li>
+<li>成交股票数量：78492276</li>
+<li>成交金额：980606833.31</li>
+<li>竟买价：12.42</li>
+<li>竟卖价：12.43</li>
+<li>买一要买的股数：23300</li>
+<li>买一报价：12.42</li>
+<li>买二要买的股数：5248</li>
+<li>买二报价：12.41</li>
+<li>买三要买的股数：27100</li>
+<li>买三报价：12.40</li>
+<li>买四要买的股数：75800</li>
+<li>买四报价：12.39</li>
+<li>买五要买的股数：62700</li>
+<li>买五报价：12.38</li>
+<li>卖一要卖的股数：25248</li>
+<li>卖一报价：12.43</li>
+<li>卖二要卖的股数：103400</li>
+<li>卖二报价：12.44</li>
+<li>卖三要卖的股数：39658</li>
+<li>卖三报价：12.45</li>
+<li>卖四要卖的股数：5600</li>
+<li>卖四报价：12.46</li>
+<li>卖五要卖的股数：36500</li>
+<li>卖五报价：12.47</li>
+<li>日期：2015-11-18 14:56:15</li>
+</ul> -->
+
+<!-- 
+<div class="bm mtm" style="border-top:2px #EB4735 solid;">
+<div class="bm_h"><a href="http://3.cncal.com/forum-2-1.html" class="xg1 y" target="_blank">更多 </a><a href="http://3.cncal.com/forum-2-1.html" target="_blank">平安银行讨论</a></div>
+<div class="bm_c cl">
+<ul>
+<p class="mtm mbm hm"><a href="http://3.cncal.com/forum.php?mod=post&amp;action=newthread&amp;fid=2" class="xi2" target="_blank">还没有发布话题，去发个 </a></p>
+</ul>
+
+</div>
+</div> -->
+<!-- 
+<div class="bm mtm" style="border-top:2px #EB4735 solid;">
+<div class="bm_h">平安银行新闻</div>
+<div class="bm_c stock_new">
+<script src="http://news.baidu.com/ns?word=title%3A平安银行&amp;tn=newsfcu&amp;from=news&amp;cl=2&amp;rn=12&amp;ct=0" type="text/javascript"></script><div style="margin-bottom:10px"><a href="http://news.baidu.com" target="_blank"><img src="http://www.baidu.com/search/img/slogo-news.gif" align="absbottom" border="0" height="21" width="60"></a>&nbsp;&nbsp;&nbsp;<a href="http://news.baidu.com/ns?word=平安银行&amp;tn=newstitle&amp;ie=gb2312&amp;sr=0&amp;cl=2&amp;rn=20&amp;ct=0" target="_blank" class="blk">平安银行</a></div><div style="text-align:left;word-wrap:break-word;width:100%" class="baidu"><a href="http://bank.cngold.org/c/2015-11-18/c3707373.html" target="_blank">平安银行离岸金融四大体系</a>&nbsp;<span>中国黄金投资网&nbsp;2015-11-18 13:53:54</span><br><a href="http://sports.sina.com.cn/golf/chinareport/2015-11-18/doc-ifxksqiu1678548.shtml" target="_blank">平安银行中国美巡赛回归 九龙山公开赛本周开战 </a>&nbsp;<span>新浪体育&nbsp;2015-11-18 11:26:00</span><br><a href="http://www.p5w.net/stock/news/gsxw/201511/t20151118_1264633.htm" target="_blank">平安银行离岸金融总资产近1000亿</a>&nbsp;<span>全景网络&nbsp;2015-11-18 08:17:00</span><br><a href="http://news.163.com/15/1118/07/B8MIBMHI00014AED.html" target="_blank">平安银行离岸金融总资产近千亿</a>&nbsp;<span>网易新闻&nbsp;2015-11-18 07:55:07</span><br><a href="http://www.askci.com/news/data/2015/11/18/74449ikqm.shtml" target="_blank">2015年11月18日最新中国平安银行存款利率表 </a>&nbsp;<span>中商情报网&nbsp;2015-11-18 07:44:00</span><br><a href="http://finance.huanqiu.com/roll/2015-11/8001078.html" target="_blank">平安银行牵手中移电商</a>&nbsp;<span>环球网&nbsp;2015-11-18 06:27:00</span><br><a href="http://epaper.xxcb.cn/XXCBC/html/2015-11/18/content_2871135.htm" target="_blank">平安银行结盟中移电商 </a>&nbsp;<span>潇湘晨报数字报&nbsp;2015-11-18 05:51:19</span><br><a href="http://news.cnstock.com/news/sns_yw/201511/3625797.htm" target="_blank">平安银行积极创新小微金融服务 多措并举破解小微企业融资难</a>&nbsp;<span>中国证券网&nbsp;2015-11-17 20:48:39</span><br><a href="http://money.news18a.com/news/151117/1/storys_9992.html" target="_blank">平安银行布局物联网金融 互联网金融同发展</a>&nbsp;<span>网通社&nbsp;2015-11-17 19:47:55</span><br><a href="http://news.163.com/15/1117/18/B8L4JLSP00014AEE.html" target="_blank">平安银行入湘“倒计时” 明年初花落长沙(组图)</a>&nbsp;<span>网易新闻&nbsp;2015-11-17 18:35:35</span><br><div style="margin-top:5px;font-size:12px"><a href="http://news.baidu.com/ns?word=平安银行&amp;tn=newstitle&amp;ie=gb2312&amp;sr=0&amp;cl=2&amp;rn=20&amp;ct=0" target="_blank" class="more">更多&gt;&gt;</a></div></div>
+</div>
+</div>
+-->
+</div>
+
+{template wirror_stock:wirror_stock_left}
+
+</div>
+
+{template common/footer}

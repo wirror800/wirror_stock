@@ -1,0 +1,43 @@
+{template common/header}
+
+<link rel="stylesheet" href="source/plugin/wirror_stock/imgs/cjxixistock.css" />
+
+<div id="ct" class="wp mbm cl">
+<div class="mn">
+
+<p class="mbm">{$zjdata['username']}，您的股票帐号可用资金：<em class="xi1">{$zjdata['stockzj']}</em> 元，
+
+<a href="plugin.php?id=wirror_stock&ac=mystock&uid={$_GET['uid']}"  style='color:red;'>查看他的资金股份 </a>
+
+</p>
+
+<div class="bm0" style="border-top:2px #EB4735 solid;">
+<table cellspacing="0" cellpadding="0" class="dt">
+<tbody><tr>
+<th>名称</th>
+<th>成交价</th>
+<th>交易类型</th>
+<th>操作时间</th>
+</tr>
+
+<!--{loop  $logdata   $value}-->
+<tr>
+<td><a href="plugin.php?id=wirror_stock&ac=detail&code={$value['stockcode']}" target="_blank" class="xi2">$value['tradename']</a></td>
+<td>$value['amountze'] 元</td>
+<!--{if $value['tradetype']==1}-->
+<td>买入</td>
+<!--{elseif $value['tradetype']==2}-->
+<td>卖出</td>
+<!--{elseif $value['tradetype']==3}-->
+<td>资金转入</td>
+<!--{/if}-->
+
+<td><span title="2015-11-16 10:10">$value['createtime']</span></td>
+</tr>
+<!--{/loop}-->
+</tbody></table>
+</div>
+</div>
+</div>
+
+{template common/footer}

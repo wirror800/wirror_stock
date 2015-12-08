@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3.2]]></item>
+	<item id="Time"><![CDATA[2015-11-23 14:28]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/upload/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[0]]></item>
+			<item id="name"><![CDATA[Wirror¹ÉÆ±¹ÉÊÐ·ÂÕæ]]></item>
+			<item id="identifier"><![CDATA[wirror_stock]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[wirror_stock/]]></item>
+			<item id="copyright"><![CDATA[CJxixi]]></item>
+			<item id="version"><![CDATA[1.0.1]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[wirror_stock]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[¹ÉÆ±¹ÉÊÐ]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3.2]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[¹ÉÆ±×Ê½ð¶Ò»»±ÈÀý]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[wirror_stockprice]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[¹ÉÆ±¶Ò»»»ý·ÖÀàÐÍ]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[wirror_stockjf]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[¹ÉÆ±Ä¬ÈÏ¿É¿´´ÎÊý]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[wirror_lookcount]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[¹ÉÆ±ÎÞÏÞ¿´ÓÃ»§×é]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[wirror_group]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+	</item>
+</root>

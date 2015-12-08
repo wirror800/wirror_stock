@@ -1,0 +1,49 @@
+{template common/header}
+<link rel="stylesheet" href="source/plugin/wirror_stock/imgs/cjxixistock.css" />
+
+<div id="ct" class="wp mbm cl">
+<div class="mn">
+
+<div >
+
+<div  style="height:30px;">
+<strong style='color:red;'>资金统计:</strong>
+<strong>总收益率: </strong><em class="xi1">$phdata['zssl'] %</em>  
+<strong>仓位: </strong><em class="xi1">$phdata['cw'] %</em>  
+<strong>胜算率: </strong><em class="xi1">$phdata['sslstr'] %</em> 元 
+<!--  
+<span class="pipe"> | </span><strong>股票盈亏: </strong><em class="xi1">0.7</em> 元
+<span class="pipe"> | </span><strong>盈亏比例: </strong><em class="xi1">0</em> %
+-->
+</div>
+</div>
+
+<div class="bm0" style="border-top:2px #EB4735 solid;">
+<table cellspacing="0" cellpadding="0" class="dt">
+<tbody><tr>
+<th>&nbsp;股票代码</th>
+<th>股票名称</th>
+<th>成本价</th>
+<th>当前价</th>
+<th>最新市值</th>
+<th>盈亏比例(%)</th>
+</tr>
+<!--{loop  $buydata  $value}-->
+<tr>
+<td><a href="plugin.php?id=wirror_stock&ac=detail&code={$value['stockcode']}"  target="_blank" class="xi2">$value['stockcode']</a></td>
+<td><a href="plugin.php?id=wirror_stock&ac=detail&code={$value['stockcode']}"  target="_blank" class="xi2">$value['stockname']</a></td>
+<td>$value['stockcbj']</td>
+<td>$value['curprice']</td>
+<td>$value['newsz']元</td>
+<td class="xi1">$value['fdykbl']   %</td>
+
+</tr>
+<!--{/loop}-->
+
+</tbody></table>
+</div>
+</div>
+
+
+</div>
+{template common/footer}

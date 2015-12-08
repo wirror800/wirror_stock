@@ -1,0 +1,27 @@
+<div class="appl">
+<div class="tbn">
+<h2 class="mt">股票交易系统</h2>
+<ul>
+<li><a href="plugin.php?id=wirror_stock">股票交易首页</a></li>
+<!--{if  !$ishowcreatelog && !$isshowmystaock }-->
+<li {if $_GET['ac']== 'market'}  class="a" {/if}><a href="plugin.php?id=wirror_stock&ac=market">股票交易市场</a></li>
+<!--{/if}-->
+
+<!--{if  !$isshowmystaock || $_GET['uid']}-->
+<li {if $_GET['ac']== 'mystock'}  class="a" {/if}><a href="plugin.php?id=wirror_stock&ac=mystock&uid={$_GET['uid']}">我的资金股份</a></li>
+<!--{else}-->
+<li {if $_GET['ac']== 'mystock'}  class="a" {/if}><a href="plugin.php?id=wirror_stock&ac=mystock">我的资金股份</a></li>
+<!--{/if}-->
+
+<!--{if  !$ishowcreatelog &&  !$isshowmystaock}-->
+<li {if $_GET['ac']== 'zxstocks'}  class="a" {/if}><a href="plugin.php?id=wirror_stock&ac=zxstocks">我的自选股票</a></li>
+<!--{/if}-->
+
+<!--{if  !$isshowmystaock || $_GET['uid']}-->
+<li {if $_GET['ac']== 'creditlog'}  class="a" {/if}><a href="plugin.php?id=wirror_stock&ac=creditlog&uid={$_GET['uid']}">我的资金流水</a></li>
+<!--{else}-->
+<li {if $_GET['ac']== 'creditlog'}  class="a" {/if}><a href="plugin.php?id=wirror_stock&ac=creditlog">我的资金流水</a></li>
+<!--{/if}-->
+</ul>
+</div>
+</div>

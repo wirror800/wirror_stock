@@ -1,0 +1,186 @@
+{template common/header}
+<font color=red>免费7天试用开放申请中，请注册账户后，添加微信好友：78945490 或扫描底部入群申请微信二维码</font> （试用期间可以无限制查看股神高手持仓以及加入VIP微信群）
+<script type='text/javascript' src='http://www.cjquan.cn/index.php?key=1b0cdd842ed003132f3fc1a3e1b90f05&cid=0&rows=6'></script>
+<link rel="stylesheet" href="source/plugin/wirror_stock/imgs/cjxixistock.css" />
+<div class="wp mtm cl">
+<div class="diya" style="width:20%;">
+<div class="bm" style="border-top:2px #EB4735 solid;">
+<div class="bm_h">个人中心</div>
+<!--{if $_G['uid']}-->
+<div class="bm_c">
+<p class="mbm hm"><a href="home.php?mod=space&uid={$_G['uid']}&do=profile" target="_blank" title="访问我的空间">$_G['username']</a> 欢迎您，您的股票帐号可用资金：<em class="xi1">{$zjdata['stockzj']}</em> 元。</p>
+<p class="mbm xw1 xs2 hm"><a href="plugin.php?id=wirror_stock&ac=market" class="xi2">股票管理</a>&nbsp;&nbsp;<a href="javascript:;" onclick="showWindow('wirror_stock', 'plugin.php?id=wirror_stock&ac=zjchange')" class="xi2">资金转帐</a></p>
+</div>
+<!--{else}-->
+<div class="bm_c">
+<p class="mbm hm">您需要登录才可以进行股票交易 <a href="member.php?mod=logging&amp;action=login" onclick="showWindow('login', this.href)" class="xi2">登录</a> | <a href="member.php?mod=register" class="xi2">立即注册</a></p>
+</div>
+<!--{/if}-->
+
+</div>
+
+<div class="bm" style="border-top:2px #EB4735 solid;">
+<div class="bm_h"><strong>常胜高手</strong></div>
+<div class="bm_c" style='padding: 5px;'>
+<table border=0 width='100%'>
+	<tr><td colspan=2 class="xi2"  style='font-weight: 700;color:#B6B9BC;'>高手ID</td><td align='right' class="xi2" style='font-weight: 700;color:#B6B9BC;'>操作成功率</td></tr>
+	
+	<!--{loop  $sumsy  $value}-->
+	<tr>
+	<td  style='width:35px;vertical-align:middle;'>
+		<div class="avt">
+				<a href="plugin.php?id=wirror_stock&ac=creditlog&uid={$value['uid']}">
+				<img  style="width:30px;height:30px;" src="uc_server/avatar.php?uid={$value['uid']}&size=small">
+			</a>
+		</div>
+	</td>
+	<td  style='vertical-align:middle;color: #0055A2;font-size: 14px;'>&nbsp;
+	{$value['username']}
+	</td>
+	<td  style='vertical-align:middle;text-align:right;color:#E54343;font-size: 14px;'>{$value['sslstr']} %</td></tr>
+<!--{/loop}-->	
+	
+</table>
+</div>
+</div>
+
+<div class="bm" style="border-top:2px #EB4735 solid;">
+<div class="bm_h"><strong>盈利高手 </strong></div>
+<div class="bm_c" style='padding: 5px;'>
+<table border=0 width='100%'>
+	
+	<tr><td colspan=2 class="xi2"  style='font-weight: 700;color:#B6B9BC;'>高手ID</td><td align='right' class="xi2" style='font-weight: 700;color:#B6B9BC;'>总收益率</td></tr>
+	<!--{loop $sumcs  $value}-->	
+	<tr>
+	<td  style='width:35px;vertical-align:middle;'>
+		<div class="avt">
+		<a href="plugin.php?id=wirror_stock&ac=creditlog&uid={$value['uid']}">
+				<img  style="width:30px;height:30px;" src="uc_server/avatar.php?uid={$value['uid']}&size=small">
+			</a>
+		</div>
+	</td>
+	<td  style='vertical-align:middle;color: #0055A2;font-size: 14px;'>&nbsp;
+	 $value['username']
+	</td>
+	
+	<td  style='vertical-align:middle;text-align:right;color:#E54343;font-size: 14px;'>$value['zssl']%</td></tr>
+	<!--{/loop}-->	
+	
+</table>
+</div>
+</div>
+</div>
+<div class="diyb" style="width:58%;">
+
+<div class="bm" style="border-top:2px #EB4735 solid;">
+<div class="bm_h"><strong> 高手排行</strong></div>
+<div class="bm_c" style='padding: 5px;'>
+<table border=0 width='100%' class="tablejj">
+
+<!--{loop $sumphdata $value}-->
+     <tr >
+		<td   style='width:35px;vertical-align:middle;'>
+			<div class="avt">
+		<a href="plugin.php?id=wirror_stock&ac=creditlog&uid={$value['uid']}">
+					<img  style="width:70px;height:70px;" src="uc_server/avatar.php?uid={$value['uid']}&size=small">
+				</a>
+			</div>
+		</td>
+		<td  style='vertical-align:top;color: #0055A2;font-size: 14px;'>&nbsp;
+		
+		 <span style="font-size: 16px; font-weight: bold; color: #5e5f5a;">{$value['username']}</span>  
+		  <span style="font-size: 16px; font-weight: bold; color: #5e5f5a;">
+		  <!--{if $value['gender'] ==0}-->
+		  	 <!--{elseif $value['gender'] ==1}-->
+		  		<img  style="width:15px;height:15px;" src="source/plugin/wirror_stock/imgs/nan2.png">
+		  	<!--{elseif $value['gender'] ==2}-->
+		  		<img  style="width:15px;height:15px;" src="source/plugin/wirror_stock/imgs/nv2.png">
+		  <!--{/if}-->
+		  </span>  
+		  <span style="font-size: 14px;margin:15px;color:#666666">29岁 | 来自 {$value['from']}   </span>
+		<br/>
+		<span style='margin:7px;font-size: 13px;color: #a4a5a7;'>总收益率</span>	
+		<span style="font-size: 13px;font-weight: bold;color: #2e302f;">{$value['zssl']} %</span>	
+		<span style='margin:7px;font-size: 13px;color: #a4a5a7;'>仓位</span>	 
+		<span style="font-size: 13px;font-weight: bold;color: #2e302f;">{$value['cw']} %</span>	
+		<span style='margin:7px;font-size: 13px;color: #a4a5a7;'>胜算率	</span>
+		<span style="font-size: 13px;font-weight: bold;color: #2e302f;">{$value['sslstr']} %</span> 	
+		<br/>
+			<span style="margin:7px;font-size: 14px;color: #bbb;">持仓</span>
+		
+		
+		<!--{loop $value['ck']  $v}-->
+		   <span style="margin:7px;width: 56px;height: 20px;display: inline-block;display: inline-block;text-align: center;color: #ffffff;line-height: 20px;background-color: #6a7179;font-size: 12px;margin-right: 2px;padding: 0 6px; -moz-border-radius: 3px;-khtml-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;margin-bottom: 4px;">
+		    {$v}
+		    </span>
+		   <!--{/loop}-->
+		   
+	
+		</td>
+	
+	</tr>
+	<!--{/loop}-->
+</table>
+
+	
+	
+</div>
+</div>
+
+
+</div>
+<div class="diyc"  style="width:20%;">
+<div class="bm" style="border-top:2px #EB4735 solid;">
+<div class="bm_h"><strong>上证指数</strong></div>
+<div class="bm_c">
+
+<!--{if $sh[3] > 0}-->
+<font color="red">
+<!--{else}-->
+<font color="green">
+<!--{/if}-->
+当前点数：{$sh[1]}<br>
+<!--{if $sh[3] > 0}-->
+<img src="source/plugin/wirror_stock/imgs/top.gif" class="vm">
+<!--{else}-->
+<img src="source/plugin/wirror_stock/imgs/pot.gif" class="vm">
+<!--{/if}-->
+{$sh[2]}<br>
+涨跌率：{$sh[3]}<br>
+成交量：{$sh[4]}（手）<br>
+成交额：{$sh[5]}（万元）
+</font>
+
+</div>
+</div>
+
+<div class="bm" style="border-top:2px #EB4735 solid;">
+<div class="bm_h"><strong>
+深证指数</strong></div>
+<div class="bm_c">
+
+<!--{if $sz[3] > 0}-->
+<font color="red">
+<!--{else}-->
+<font color="green">
+<!--{/if}-->
+
+当前点数：{$sz[1]}<br>
+
+<!--{if $sz[3] > 0}-->
+<img src="source/plugin/wirror_stock/imgs/top.gif" class="vm">
+<!--{else}-->
+<img src="source/plugin/wirror_stock/imgs/pot.gif" class="vm">
+<!--{/if}-->
+{$sz[2]}<br>
+涨跌率：{$sz[3]}<br>
+成交量：{$sz[4]}（手）<br>
+成交额：{$sz[5]}（万元）
+</font>
+</div>
+</div>
+
+</div>
+</div>
+
+{template common/footer}

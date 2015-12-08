@@ -1,0 +1,62 @@
+{template common/header}
+
+<link rel="stylesheet" href="source/plugin/wirror_stock/imgs/cjxixistock.css" />
+
+<div class="diyb" style="width:100%;margin-left:0;">
+<div class="bm" style="border-top:2px #EB4735 solid;">
+<div class="bm_h" style="height:100%;text-align:center;font-size:16px;"><strong >高手排行</strong></div>
+<div class="bm_c" style='padding: 5px;'>
+<table border=0 width='100%' class="tablejj">
+
+<!--{loop $sumphdata $value}-->
+     <tr >
+		<td   style='width:35px;vertical-align:middle;'>
+			<div class="avt">
+		<a href="plugin.php?id=wirror_stock&ac=creditlog&uid={$value['uid']}">
+					<img  style="width:70px;height:70px;" src="uc_server/avatar.php?uid={$value['uid']}&size=small">
+				</a>
+			</div>
+		</td>
+		<td  style='vertical-align:top;color: #0055A2;font-size: 14px;'>&nbsp;
+		
+		 <span style="font-size: 16px; font-weight: bold; color: #5e5f5a;">{$value['username']}</span>  
+		  <span style="font-size: 16px; font-weight: bold; color: #5e5f5a;">
+		  <!--{if $value['gender'] ==0}-->
+		  	 <!--{elseif $value['gender'] ==1}-->
+		  		<img  style="width:15px;height:15px;" src="source/plugin/wirror_stock/imgs/nan2.png">
+		  	<!--{elseif $value['gender'] ==2}-->
+		  		<img  style="width:15px;height:15px;" src="source/plugin/wirror_stock/imgs/nv2.png">
+		  <!--{/if}-->
+		  </span>  
+		  <span style="font-size: 14px;margin:15px;color:#666666">29岁 | 来自 {$value['from']}   </span>
+		<br/>
+		<span style='margin:7px;font-size: 13px;color: #a4a5a7;'>总收益率</span>	
+		<span style="font-size: 13px;font-weight: bold;color: #2e302f;">{$value['zssl']} %</span>	
+		<span style='margin:7px;font-size: 13px;color: #a4a5a7;'>仓位</span>	 
+		<span style="font-size: 13px;font-weight: bold;color: #2e302f;">{$value['cw']} %</span>	
+		<span style='margin:7px;font-size: 13px;color: #a4a5a7;'>胜算率	</span>
+		<span style="font-size: 13px;font-weight: bold;color: #2e302f;">{$value['sslstr']} %</span> 	
+		<br/>
+			<span style="margin:7px;font-size: 14px;color: #bbb;">持仓</span>
+		
+		
+		<!--{loop $value['ck']  $v}-->
+		   <span style="margin:7px;width: 56px;height: 20px;display: inline-block;display: inline-block;text-align: center;color: #ffffff;line-height: 20px;background-color: #6a7179;font-size: 12px;margin-right: 2px;padding: 0 6px; -moz-border-radius: 3px;-khtml-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;margin-bottom: 4px;">
+		    {$v}
+		    </span>
+		   <!--{/loop}-->
+		   
+	
+		</td>
+	
+	</tr>
+	<!--{/loop}-->
+</table>
+	
+</div>
+</div>
+</div>
+
+</div>
+
+{template common/footer}
